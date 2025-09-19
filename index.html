@@ -18,13 +18,17 @@
         .content {
             border-top: 2px solid orange;
             padding-top: 10px;
+            padding-bottom: 10px;
             margin-top: 10px;
+            font-size: 14pt;
         }
         .dataset-name {
-            font-size: 14pt;
+            font-size: 16pt;
             text-align: center;
             font-weight: bold;
             margin-bottom: 10px;
+            padding-top: 20px;
+            padding-bottom: 20px;
         }
         .paper_figure img {
             width: 960px;
@@ -45,6 +49,7 @@
             width: 960px;
             display: block;
             margin: auto;
+            padding: 10px 10px;
         }
         .simulated img {
             width: 960px;
@@ -57,7 +62,7 @@
             margin: 0 auto;
         }
         .sample_imag img {
-            width: 200px;
+            width: 300px;
             display: block;
             margin: 0 auto;
         }
@@ -113,128 +118,171 @@
         <tr>
             <td>
                 <section class="content">
-                    <div class="dataset-name">Number of sound sources = 2</div>
+                    <div class="dataset-name">Audio samples (performance on the Spatialized WSJ0-2mix dataset)</div>
                     <div class="demo">
                     <table style="width: 600px; max-width: 100%; border: 1px solid black;">
                         <tr>
-                            <th style="border: 1px solid black; width: 200px;">Mixed sound</th>
-                            <th style="border: 1px solid black; width: 200px;">Ground truth 1</th>
-                            <th style="border: 1px solid black; width: 200px;">Ground truth 2</th>
+                            <th style="border: 1px solid black; width: 200px; padding: 5px 20px;">Sample</th>
+                            <th style="border: 1px solid black; width: 200px;">Mixture</th>
+                            <th style="border: 1px solid black; width: 200px;">Target</th>
+                            <th style="border: 1px solid black; width: 200px;">ReZero</th>
+                            <th style="border: 1px solid black; width: 200px;">DSS</th>
+                            <th style="border: 1px solid black; width: 200px;">Ours</th>
                         </tr>
                         <tr>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip1/mixed.png"><audio controls style="width: 100%;"><source src="src/audio/clip1/mixed.wav" type="audio/wav"></audio></div></td>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip1/gt1.png"><audio controls style="width: 100%;"><source src="src/audio/clip1/gt1.wav" type="audio/wav"></audio></div></td>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip1/gt2.png"><audio controls style="width: 100%;"><source src="src/audio/clip1/gt2.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;">1</td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_wsj0/sample1/1_mix.png">   <audio controls style="width: 100%;"><source src="src/audio/performance_on_wsj0/sample1/1_mix.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_wsj0/sample1/1_target.png"><audio controls style="width: 100%;"><source src="src/audio/performance_on_wsj0/sample1/1_target.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_wsj0/sample1/1_rezero.png"><audio controls style="width: 100%;"><source src="src/audio/performance_on_wsj0/sample1/1_rezero.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_wsj0/sample1/1_dss.png">   <audio controls style="width: 100%;"><source src="src/audio/performance_on_wsj0/sample1/1_dss.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_wsj0/sample1/1_ours.png">  <audio controls style="width: 100%;"><source src="src/audio/performance_on_wsj0/sample1/1_ours.wav" type="audio/wav"></audio></div></td>
                         </tr>
+
                         <tr>
-                            <th style="border: 1px solid black; width: 200px;">SpatialNet</th>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip1/base1.png"><audio controls style="width: 100%;"><source src="src/audio/clip1/base1.wav" type="audio/wav"></audio></div></td>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip1/base2.png"><audio controls style="width: 100%;"><source src="src/audio/clip1/base2.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;">2</td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_wsj0/sample2/2_mix.png">   <audio controls style="width: 100%;"><source src="src/audio/performance_on_wsj0/sample2/2_mix.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_wsj0/sample2/2_target.png"><audio controls style="width: 100%;"><source src="src/audio/performance_on_wsj0/sample2/2_target.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_wsj0/sample2/2_rezero.png"><audio controls style="width: 100%;"><source src="src/audio/performance_on_wsj0/sample2/2_rezero.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_wsj0/sample2/2_dss.png">   <audio controls style="width: 100%;"><source src="src/audio/performance_on_wsj0/sample2/2_dss.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_wsj0/sample2/2_ours.png">  <audio controls style="width: 100%;"><source src="src/audio/performance_on_wsj0/sample2/2_ours.wav" type="audio/wav"></audio></div></td>
                         </tr>
+
                         <tr>
-                            <th style="border: 1px solid black; width: 200px;">DeFTMamba</th>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip1/prop1.png"><audio controls style="width: 100%;"><source src="src/audio/clip1/prop1.wav" type="audio/wav"></audio></div></td>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip1/prop2.png"><audio controls style="width: 100%;"><source src="src/audio/clip1/prop2.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;">3</td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_wsj0/sample3/3_mix.png">   <audio controls style="width: 100%;"><source src="src/audio/performance_on_wsj0/sample3/3_mix.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_wsj0/sample3/3_target.png"><audio controls style="width: 100%;"><source src="src/audio/performance_on_wsj0/sample3/3_target.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_wsj0/sample3/3_rezero.png"><audio controls style="width: 100%;"><source src="src/audio/performance_on_wsj0/sample3/3_rezero.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_wsj0/sample3/3_dss.png">   <audio controls style="width: 100%;"><source src="src/audio/performance_on_wsj0/sample3/3_dss.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_wsj0/sample3/3_ours.png">  <audio controls style="width: 100%;"><source src="src/audio/performance_on_wsj0/sample3/3_ours.wav" type="audio/wav"></audio></div></td>
+                        </tr>
+
+                        <tr>
+                            <td style="text-align: center; border: 1px solid black;">4</td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_wsj0/sample4/4_mix.png">   <audio controls style="width: 100%;"><source src="src/audio/performance_on_wsj0/sample4/4_mix.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_wsj0/sample4/4_target.png"><audio controls style="width: 100%;"><source src="src/audio/performance_on_wsj0/sample4/4_target.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_wsj0/sample4/4_rezero.png"><audio controls style="width: 100%;"><source src="src/audio/performance_on_wsj0/sample4/4_rezero.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_wsj0/sample4/4_dss.png">   <audio controls style="width: 100%;"><source src="src/audio/performance_on_wsj0/sample4/4_dss.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_wsj0/sample4/4_ours.png">  <audio controls style="width: 100%;"><source src="src/audio/performance_on_wsj0/sample4/4_ours.wav" type="audio/wav"></audio></div></td>
                         </tr>
                     </table>
                     </div>
                 </section>
 
                 <section class="content">
-                    <div class="dataset-name">Number of sound sources = 3</div>
+                    <div class="dataset-name"> Audio samples (azimuth resolution capabilities)</div>
                     <div class="demo">
                     <table style="width: 800px; max-width: 100%; border: 1px solid black;">
                         <tr>
-                            <th style="border: 1px solid black; width: 200px;">Mixed sound</th>
-                            <th style="border: 1px solid black; width: 200px;">Ground truth 1</th>
-                            <th style="border: 1px solid black; width: 200px;">Ground truth 2</th>
-                            <th style="border: 1px solid black; width: 200px;">Ground truth 3</th>
+                            <th style="border: 1px solid black; width: 200px; padding: 5px 20px;">Azimuth</th>
+                            <th style="border: 1px solid black; width: 200px;">Mixture</th>
+                            <th style="border: 1px solid black; width: 200px;">Target</th>
+                            <th style="border: 1px solid black; width: 200px;">ReZero</th>
+                            <th style="border: 1px solid black; width: 200px;">DSS</th>
+                            <th style="border: 1px solid black; width: 200px;">Ours</th>
                         </tr>
                         <tr>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip2/mixed.png"><audio controls style="width: 100%;"><source src="src/audio/clip2/mixed.wav" type="audio/wav"></audio></div></td>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip2/gt1.png"><audio controls style="width: 100%;"><source src="src/audio/clip2/gt1.wav" type="audio/wav"></audio></div></td>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip2/gt2.png"><audio controls style="width: 100%;"><source src="src/audio/clip2/gt2.wav" type="audio/wav"></audio></div></td>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip2/gt3.png"><audio controls style="width: 100%;"><source src="src/audio/clip2/gt3.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;">[5°,10°]</td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_azimuth/sample1/1_mix.png">   <audio controls style="width: 100%;"><source src="src/audio/performance_on_azimuth/sample1/1_mix.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_azimuth/sample1/1_target.png"><audio controls style="width: 100%;"><source src="src/audio/performance_on_azimuth/sample1/1_target.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_azimuth/sample1/1_rezero.png"><audio controls style="width: 100%;"><source src="src/audio/performance_on_azimuth/sample1/1_rezero.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_azimuth/sample1/1_dss.png">   <audio controls style="width: 100%;"><source src="src/audio/performance_on_azimuth/sample1/1_dss.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_azimuth/sample1/1_ours.png">  <audio controls style="width: 100%;"><source src="src/audio/performance_on_azimuth/sample1/1_ours.wav" type="audio/wav"></audio></div></td>
                         </tr>
+
                         <tr>
-                            <th style="border: 1px solid black; width: 200px;">SpatialNet</th>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip2/base1.png"><audio controls style="width: 100%;"><source src="src/audio/clip2/base1.wav" type="audio/wav"></audio></div></td>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip2/base2.png"><audio controls style="width: 100%;"><source src="src/audio/clip2/base2.wav" type="audio/wav"></audio></div></td>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip2/base3.png"><audio controls style="width: 100%;"><source src="src/audio/clip2/base3.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;">[10°,15°]</td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_azimuth/sample2/2_mix.png">   <audio controls style="width: 100%;"><source src="src/audio/performance_on_azimuth/sample2/2_mix.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_azimuth/sample2/2_target.png"><audio controls style="width: 100%;"><source src="src/audio/performance_on_azimuth/sample2/2_target.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_azimuth/sample2/2_rezero.png"><audio controls style="width: 100%;"><source src="src/audio/performance_on_azimuth/sample2/2_rezero.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_azimuth/sample2/2_dss.png">   <audio controls style="width: 100%;"><source src="src/audio/performance_on_azimuth/sample2/2_dss.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_azimuth/sample2/2_ours.png">  <audio controls style="width: 100%;"><source src="src/audio/performance_on_azimuth/sample2/2_ours.wav" type="audio/wav"></audio></div></td>
                         </tr>
+
                         <tr>
-                            <th style="border: 1px solid black; width: 200px;">DeFTMamba</th>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip2/prop1.png"><audio controls style="width: 100%;"><source src="src/audio/clip2/prop1.wav" type="audio/wav"></audio></div></td>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip2/prop2.png"><audio controls style="width: 100%;"><source src="src/audio/clip2/prop2.wav" type="audio/wav"></audio></div></td>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip2/prop3.png"><audio controls style="width: 100%;"><source src="src/audio/clip2/prop3.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;">[15°,20°]</td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_azimuth/sample3/3_mix.png">   <audio controls style="width: 100%;"><source src="src/audio/performance_on_azimuth/sample3/3_mix.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_azimuth/sample3/3_target.png"><audio controls style="width: 100%;"><source src="src/audio/performance_on_azimuth/sample3/3_target.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_azimuth/sample3/3_rezero.png"><audio controls style="width: 100%;"><source src="src/audio/performance_on_azimuth/sample3/3_rezero.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_azimuth/sample3/3_dss.png">   <audio controls style="width: 100%;"><source src="src/audio/performance_on_azimuth/sample3/3_dss.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_azimuth/sample3/3_ours.png">  <audio controls style="width: 100%;"><source src="src/audio/performance_on_azimuth/sample3/3_ours.wav" type="audio/wav"></audio></div></td>
+                        </tr>
+
+                        <tr>
+                            <td style="text-align: center; border: 1px solid black;">[20°,25°]</td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_azimuth/sample4/4_mix.png">   <audio controls style="width: 100%;"><source src="src/audio/performance_on_azimuth/sample4/4_mix.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_azimuth/sample4/4_target.png"><audio controls style="width: 100%;"><source src="src/audio/performance_on_azimuth/sample4/4_target.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_azimuth/sample4/4_rezero.png"><audio controls style="width: 100%;"><source src="src/audio/performance_on_azimuth/sample4/4_rezero.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_azimuth/sample4/4_dss.png">   <audio controls style="width: 100%;"><source src="src/audio/performance_on_azimuth/sample4/4_dss.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_azimuth/sample4/4_ours.png">  <audio controls style="width: 100%;"><source src="src/audio/performance_on_azimuth/sample4/4_ours.wav" type="audio/wav"></audio></div></td>
+                        </tr>
+
+                        <tr>
+                            <td style="text-align: center; border: 1px solid black;">[25°,30°]</td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_azimuth/sample5/5_mix.png">   <audio controls style="width: 100%;"><source src="src/audio/performance_on_azimuth/sample5/5_mix.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_azimuth/sample5/5_target.png"><audio controls style="width: 100%;"><source src="src/audio/performance_on_azimuth/sample5/5_target.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_azimuth/sample5/5_rezero.png"><audio controls style="width: 100%;"><source src="src/audio/performance_on_azimuth/sample5/5_rezero.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_azimuth/sample5/5_dss.png">   <audio controls style="width: 100%;"><source src="src/audio/performance_on_azimuth/sample5/5_dss.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_azimuth/sample5/5_ours.png">  <audio controls style="width: 100%;"><source src="src/audio/performance_on_azimuth/sample5/5_ours.wav" type="audio/wav"></audio></div></td>
                         </tr>
                     </table>
                     </div>
                 </section>
 
                 <section class="content">
-                    <div class="dataset-name">Number of sound sources = 4</div>
-                    <div class="demo">
-                    <table style="width: 1000px; max-width: 100%; border: 1px solid black;">
-                        <tr>
-                            <th style="border: 1px solid black; width: 200px;">Mixed sound</th>
-                            <th style="border: 1px solid black; width: 200px;">Ground truth 1</th>
-                            <th style="border: 1px solid black; width: 200px;">Ground truth 2</th>
-                            <th style="border: 1px solid black; width: 200px;">Ground truth 3</th>
-                            <th style="border: 1px solid black; width: 200px;">Ground truth 4</th>
-                        </tr>
-                        <tr>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip3/mixed.png"><audio controls style="width: 100%;"><source src="src/audio/clip3/mixed.wav" type="audio/wav"></audio></div></td>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip3/gt1.png"><audio controls style="width: 100%;"><source src="src/audio/clip3/gt1.wav" type="audio/wav"></audio></div></td>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip3/gt2.png"><audio controls style="width: 100%;"><source src="src/audio/clip3/gt2.wav" type="audio/wav"></audio></div></td>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip3/gt3.png"><audio controls style="width: 100%;"><source src="src/audio/clip3/gt3.wav" type="audio/wav"></audio></div></td>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip3/gt4.png"><audio controls style="width: 100%;"><source src="src/audio/clip3/gt4.wav" type="audio/wav"></audio></div></td>
-                        </tr>
-                        <tr>
-                            <th style="border: 1px solid black; width: 200px;">SpatialNet</th>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip3/base1.png"><audio controls style="width: 100%;"><source src="src/audio/clip3/base1.wav" type="audio/wav"></audio></div></td>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip3/base2.png"><audio controls style="width: 100%;"><source src="src/audio/clip3/base2.wav" type="audio/wav"></audio></div></td>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip3/base3.png"><audio controls style="width: 100%;"><source src="src/audio/clip3/base3.wav" type="audio/wav"></audio></div></td>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip3/base4.png"><audio controls style="width: 100%;"><source src="src/audio/clip3/base4.wav" type="audio/wav"></audio></div></td>
-                        </tr>
-                        <tr>
-                            <th style="border: 1px solid black; width: 200px;">DeFTMamba</th>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip3/prop1.png"><audio controls style="width: 100%;"><source src="src/audio/clip3/prop1.wav" type="audio/wav"></audio></div></td>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip3/base2.png"><audio controls style="width: 100%;"><source src="src/audio/clip3/prop2.wav" type="audio/wav"></audio></div></td>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip3/base3.png"><audio controls style="width: 100%;"><source src="src/audio/clip3/prop3.wav" type="audio/wav"></audio></div></td>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip3/base4.png"><audio controls style="width: 100%;"><source src="src/audio/clip3/prop4.wav" type="audio/wav"></audio></div></td>
-                        </tr>
-                    </table>
-                    </div>
-                </section>
-
-                <section class="content">
-                    <div class="dataset-name">In-class polyphony audio (source 1 & 2)</div>
+                    <div class="dataset-name"> Audio samples (azimuth resolution capabilities)</div>
                     <div class="demo">
                     <table style="width: 800px; max-width: 100%; border: 1px solid black;">
                         <tr>
-                            <th style="border: 1px solid black; width: 200px;">Mixed sound</th>
-                            <th style="border: 1px solid black; width: 200px;">Ground truth 1</th>
-                            <th style="border: 1px solid black; width: 200px;">Ground truth 2</th>
-                            <th style="border: 1px solid black; width: 200px;">Ground truth 3</th>
+                            <th style="border: 1px solid black; width: 200px; padding: 5px 20px">Distance</th>
+                            <th style="border: 1px solid black; width: 200px;">Mixture</th>
+                            <th style="border: 1px solid black; width: 200px;">Target</th>
+                            <th style="border: 1px solid black; width: 200px;">ReZero</th>
+                            <th style="border: 1px solid black; width: 200px;">DSS</th>
+                            <th style="border: 1px solid black; width: 200px;">Ours</th>
                         </tr>
                         <tr>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip4/mixed.png"><audio controls style="width: 100%;"><source src="src/audio/clip4/mixed.wav" type="audio/wav"></audio></div></td>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip4/gt1.png"><audio controls style="width: 100%;"><source src="src/audio/clip4/gt1.wav" type="audio/wav"></audio></div></td>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip4/gt2.png"><audio controls style="width: 100%;"><source src="src/audio/clip4/gt2.wav" type="audio/wav"></audio></div></td>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip4/gt3.png"><audio controls style="width: 100%;"><source src="src/audio/clip4/gt3.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;">[0m,0.2m]</td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_distance/sample1/1_mix.png">   <audio controls style="width: 100%;"><source src="src/audio/performance_on_distance/sample1/1_mix.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_distance/sample1/1_target.png"><audio controls style="width: 100%;"><source src="src/audio/performance_on_distance/sample1/1_target.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_distance/sample1/1_rezero.png"><audio controls style="width: 100%;"><source src="src/audio/performance_on_distance/sample1/1_rezero.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_distance/sample1/1_dss.png">   <audio controls style="width: 100%;"><source src="src/audio/performance_on_distance/sample1/1_dss.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_distance/sample1/1_ours.png">  <audio controls style="width: 100%;"><source src="src/audio/performance_on_distance/sample1/1_ours.wav" type="audio/wav"></audio></div></td>
                         </tr>
+
                         <tr>
-                            <th style="border: 1px solid black; width: 200px;">SpatialNet</th>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip4/base1.png"><audio controls style="width: 100%;"><source src="src/audio/clip4/base1.wav" type="audio/wav"></audio></div></td>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip4/base2.png"><audio controls style="width: 100%;"><source src="src/audio/clip4/base2.wav" type="audio/wav"></audio></div></td>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip4/base3.png"><audio controls style="width: 100%;"><source src="src/audio/clip4/base3.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;">[0.2m,0.4m]</td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_distance/sample2/2_mix.png">   <audio controls style="width: 100%;"><source src="src/audio/performance_on_distance/sample2/2_mix.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_distance/sample2/2_target.png"><audio controls style="width: 100%;"><source src="src/audio/performance_on_distance/sample2/2_target.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_distance/sample2/2_rezero.png"><audio controls style="width: 100%;"><source src="src/audio/performance_on_distance/sample2/2_rezero.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_distance/sample2/2_dss.png">   <audio controls style="width: 100%;"><source src="src/audio/performance_on_distance/sample2/2_dss.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_distance/sample2/2_ours.png">  <audio controls style="width: 100%;"><source src="src/audio/performance_on_distance/sample2/2_ours.wav" type="audio/wav"></audio></div></td>
                         </tr>
+
                         <tr>
-                            <th style="border: 1px solid black; width: 200px;">DeFTMamba</th>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip4/prop1.png"><audio controls style="width: 100%;"><source src="src/audio/clip4/prop1.wav" type="audio/wav"></audio></div></td>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip4/prop2.png"><audio controls style="width: 100%;"><source src="src/audio/clip4/prop2.wav" type="audio/wav"></audio></div></td>
-                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/clip4/prop3.png"><audio controls style="width: 100%;"><source src="src/audio/clip4/prop3.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;">[0.4m,0.6m]</td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_distance/sample3/3_mix.png">   <audio controls style="width: 100%;"><source src="src/audio/performance_on_distance/sample3/3_mix.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_distance/sample3/3_target.png"><audio controls style="width: 100%;"><source src="src/audio/performance_on_distance/sample3/3_target.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_distance/sample3/3_rezero.png"><audio controls style="width: 100%;"><source src="src/audio/performance_on_distance/sample3/3_rezero.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_distance/sample3/3_dss.png">   <audio controls style="width: 100%;"><source src="src/audio/performance_on_distance/sample3/3_dss.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_distance/sample3/3_ours.png">  <audio controls style="width: 100%;"><source src="src/audio/performance_on_distance/sample3/3_ours.wav" type="audio/wav"></audio></div></td>
+                        </tr>
+
+                        <tr>
+                            <td style="text-align: center; border: 1px solid black;">[0.6m,0.8m]</td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_distance/sample4/4_mix.png">   <audio controls style="width: 100%;"><source src="src/audio/performance_on_distance/sample4/4_mix.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_distance/sample4/4_target.png"><audio controls style="width: 100%;"><source src="src/audio/performance_on_distance/sample4/4_target.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_distance/sample4/4_rezero.png"><audio controls style="width: 100%;"><source src="src/audio/performance_on_distance/sample4/4_rezero.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_distance/sample4/4_dss.png">   <audio controls style="width: 100%;"><source src="src/audio/performance_on_distance/sample4/4_dss.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_distance/sample4/4_ours.png">  <audio controls style="width: 100%;"><source src="src/audio/performance_on_distance/sample4/4_ours.wav" type="audio/wav"></audio></div></td>
+                        </tr>
+
+                        <tr>
+                            <td style="text-align: center; border: 1px solid black;">[0.8m,1.0m]</td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_distance/sample5/5_mix.png">   <audio controls style="width: 100%;"><source src="src/audio/performance_on_distance/sample5/5_mix.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_distance/sample5/5_target.png"><audio controls style="width: 100%;"><source src="src/audio/performance_on_distance/sample5/5_target.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_distance/sample5/5_rezero.png"><audio controls style="width: 100%;"><source src="src/audio/performance_on_distance/sample5/5_rezero.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_distance/sample5/5_dss.png">   <audio controls style="width: 100%;"><source src="src/audio/performance_on_distance/sample5/5_dss.wav" type="audio/wav"></audio></div></td>
+                            <td style="text-align: center; border: 1px solid black;"><div class="sample_imag"><img src="src/fig/performance_on_distance/sample5/5_ours.png">  <audio controls style="width: 100%;"><source src="src/audio/performance_on_azimuth/sample5/5_ours.wav" type="audio/wav"></audio></div></td>
                         </tr>
                     </table>
                     </div>
